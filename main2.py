@@ -45,3 +45,24 @@ mp.xlabel('Valor de la señal')
 mp.ylabel('Frecuencia')
 mp.grid()
 mp.show()
+
+#ruido gaussiano
+
+# Parámetros distribución gaussiana
+media = 0      # Media de la distribución (el centro de la campana)
+desviacion_estandar = 0.1  # Desviación estándar (el ancho de la campana)
+longitud = len(original_signal)  # Longitud del array de ruido
+ruido_gaussiano = np.random.normal(media, desviacion_estandar, longitud)
+
+gaussian_signal= original_signal + ruido_gaussiano
+
+mp.figure(figsize=(12,4))
+mp.plot(time_10s, gaussian_signal[:num_muestras_10s], label='señal ruido gaussiano')
+mp.grid()
+mp.title('señal ruido gaussiano (cu01)')
+mp.xlabel('Tiempo[s]')
+mp.ylabel('Amplitud[mV]')
+mp.show()
+
+cuadrado_gausssignal = np.mean(signal**2)
+noise_power = np.mean(noise**2)
