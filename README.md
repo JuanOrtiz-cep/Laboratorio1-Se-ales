@@ -19,7 +19,10 @@ Este repositorio contiene un script de Python simple para cargar y visualizar se
 
 ## PROCEDIMIENTO
 1. **Instalacion librerias**
-  * usando ```pip install wfdb numpy matplotlib (abrir CMD para instalar esas librerias o directamente en la terminal ) ```
+    
+  ```bash
+ pip install wfdb numpy matplotlib (abrir CMD para instalar esas librerias o directamente en la terminal )
+```
 
 Crear un archivo con las siguientes líneas (Python) :
 
@@ -36,6 +39,7 @@ import matplotlib.pyplot as mp
 2. **Usando la web physionet descarga un archivo de ECG:**
 
 Coloca el archivo .hea y .dat (por ejemplo, cu01.hea, cu01.dat) en la misma carpeta que el script de Python.
+esto para evitar 
 
 
 3. **Selección del canal:** Modifica el índice dentro de signal = record.p_signal[:,0] para seleccionar un canal diferente si el registro tiene múltiples canales.
@@ -49,7 +53,11 @@ Coloca el archivo .hea y .dat (por ejemplo, cu01.hea, cu01.dat) en la misma carp
    mp.xlabel('Tiempo (s)')
    mp.ylabel('Voltaje(mv)')
    mp.legend()
-   mp.grid() ```
+   mp.grid()
+   ```
+5. **
+
+   
 
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
