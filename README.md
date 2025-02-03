@@ -4,11 +4,11 @@
 
 Este repositorio contiene un script de Python simple para cargar y visualizar señales electrocardiográficas (ECG) a partir de archivos .hea y .dat de PhysioNet.
 ## Objetivos
- *Descargar y visualizar una señal fisiológica.
+ * Descargar y visualizar una señal fisiológica.
  
- *Calcular estadísticos descriptivos (media, desviación estándar, coeficiente de variación, histogramas, función de probabilidad).
+ * Calcular estadísticos descriptivos (media, desviación estándar, coeficiente de variación, histogramas, función de probabilidad).
  
- *Introducir ruido (gaussiano, impulsivo y de aparato) y calcular la relación señal-ruido (SNR).
+ * Introducir ruido (gaussiano, impulsivo y de aparato) y calcular la relación señal-ruido (SNR).
   
 ## Requisitos
 * **Python:** Se requiere una instalación de Python 3.x.
