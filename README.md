@@ -19,13 +19,16 @@ Este repositorio contiene un script de Python simple para cargar y visualizar se
 
 ## Instalación
 1. **Usa las librerias:**
-   
+  * usando pip install wfdb numpy matplotlib (se instalan las librerias)
+
 Crear un archivo con las siguientes líneas:
+      import (necesario para usar las librerias)
+      
 * wfdb: para la lectura de la señal de PhysioNet
 * matplotlib: para la graficación
 * numpy: para los datos estadisticos
 
-3. **Usando physionet descarga un archivo de ECG:**
+2. **Usando la web physionet descarga un archivo de ECG:**
 
 Coloca el archivo .hea y .dat (por ejemplo, cu01.hea, cu01.dat) en la misma carpeta que el script de Python.
 
