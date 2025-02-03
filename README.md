@@ -23,11 +23,11 @@ Este repositorio contiene un script de Python simple para cargar y visualizar se
 
 Crear un archivo con las siguientes líneas:
 
+```python
 import wfdb as wf  
-
-import numpy as np (as utilizado para nombrar a la libreria)
-
+import numpy as np # El as es utilizado para renombrar a la libreria y poder llamarla mas facil
 import matplotlib.pyplot as mp
+```
   
 * wfdb: para la lectura de la señal de PhysioNet
 * matplotlib: para la graficación
