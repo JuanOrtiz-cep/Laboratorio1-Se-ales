@@ -17,11 +17,11 @@ Este repositorio contiene un script de Python simple para cargar y visualizar se
   * `matplotlib`: Para crear gráficos.
   * `numpy`: Para realizar operaciones numéricas.
 
-## Instalación
-1. **Usa las librerias:**
-  * usando pip install wfdb numpy matplotlib (se instalan las librerias)
+## PROCEDIMIENTO
+1. **Instalacion librerias**
+  * usando ```pip install wfdb numpy matplotlib (abrir CMD para instalar esas librerias o directamente en la terminal ) ```
 
-Crear un archivo con las siguientes líneas:
+Crear un archivo con las siguientes líneas (Python) :
 
 ```python
 import wfdb as wf  
@@ -39,7 +39,18 @@ Coloca el archivo .hea y .dat (por ejemplo, cu01.hea, cu01.dat) en la misma carp
 
 
 3. **Selección del canal:** Modifica el índice dentro de signal = record.p_signal[:,0] para seleccionar un canal diferente si el registro tiene múltiples canales.
+ 
 4. **Personalización del gráfico:** Utiliza las funciones de matplotlib para personalizar el aspecto del gráfico (colores, etiquetas, límites, etc.).
+   ```python
+   
+   mp.figure(figsize=(12, 4))
+   mp.plot(time, signal, label='Señal original')
+   mp.title('Señal Fisiológica (cu01)')
+   mp.xlabel('Tiempo (s)')
+   mp.ylabel('Voltaje(mv)')
+   mp.legend()
+   mp.grid() ```
+
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, por favor, crea un issue o un pull request.
