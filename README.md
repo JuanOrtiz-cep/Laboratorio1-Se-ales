@@ -3,9 +3,11 @@
 # Visualizador de Señales Electrocardiográficas (ECG)
 
 Este repositorio contiene un script de Python simple para cargar y visualizar señales electrocardiográficas (ECG) a partir de archivos .hea y .dat de PhysioNet.
-## Objetivo
+## Objetivos
  *Descargar y visualizar una señal fisiológica.
+ 
  *Calcular estadísticos descriptivos (media, desviación estándar, coeficiente de variación, histogramas, función de probabilidad).
+ 
  *Introducir ruido (gaussiano, impulsivo y de aparato) y calcular la relación señal-ruido (SNR).
   
 ## Requisitos
