@@ -92,15 +92,73 @@ Desviación estándar: 0.44077231632548347
 Coeficiente de variación: -1.973583540200225
 
 ```
+
+
 * Media: El promedio de los valores en la señal.
 * Varianza: Nos dice qué tan dispersos están los datos respecto a la media.
 * Desviación estándar: Es la raíz cuadrada de la varianza y nos dice cuánto varían los valores en promedio.
 * Coeficiente de Variación (CV): Mide la variabilidad relativa respecto a la media.
 
-## **Ya con todo esto , se crea una interfaz para el histograma con las funciones de matplotlib similares al punto 3**
+### **Una vez realizado los calculos estadisticos , se crea una interfaz para el histograma con las funciones de matplotlib similares al punto 3**
 
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/155112a9-58bf-45c5-82b3-6cde9e2dfb59.jpg)
    
+
+# *5. Funcion de probabilidad*
+
+**toma los valores de la señal y los organiza en 100 grupos para calcular la probabilidad de ocurrencia de cada valor. A continuación, explicamos cada línea del código.**
+
+```python
+min_val = min(original_signal)  # Valor mínimo de la señal
+```
+
+**Se obtiene el valor mínimo de la señal, que será el límite inferior del rango en el que se agruparán los valores.**
+
+```python
+max_val = max(original_signal)  # Encuentra el valor más grande en la señal
+```
+
+**Se encuentra el valor máximo de la señal, que será el límite superior del rango.**
+
+```python
+max_val = max(original_signal)  # Encuentra el valor más grande en la señal
+```
+
+**Aquí definimos 100 grupos (bins) para organizar los valores de la señal dentro de un rango.**
+
+```python
+num_bins = 100  # Número de divisiones o grupos en los que se agruparán los valores
+```
+
+**El tamaño de cada grupo se obtiene dividiendo el rango de valores entre la cantidad de grupos.**
+
+```python
+bin_width = (max_val - min_val) / num_bins  # Calcula el tamaño de cada grupo
+```
+
+**Se inicializa una lista con 100 posiciones en cero, donde se contarán los valores de la señal que caen en cada grupo.**
+
+```python
+counts = [0] * num_bins  # Crea una lista con 100 espacios inicializados en 0
+```
+**Se recorre cada valor de la señal y se calcula a qué grupo pertenece. Luego, se suma 1 en ese grupo para contar cuántos valores caen en él.**
+
+```python
+for value in original_signal:
+    bin_index = int((value - min_val) / bin_width)  # Encuentra en qué grupo cae el valor
+    counts[bin_index] += 1  # Aumenta el contador en ese grupo
+```
+**Los conteos se dividen entre la cantidad total de datos para convertirlos en probabilidades, asegurando que la suma total sea 1.**
+
+```python
+probabilidad = [count / len(original_signal) for count in counts]
+```
+
+**Se genera una lista con los límites de cada bin para poder graficar correctamente los resultados.**
+```python
+bins = [min_val + i * bin_width for i in range(num_bins + 1)]  # Crea los límites de cada grupo
+```
+ 
 
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
