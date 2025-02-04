@@ -67,7 +67,7 @@ time_10s = np.arange(num_muestras_10s)/fs ##10 SEGUNDOS del muestreo de datos
    ```
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Se%C3%B1alFisiologica(original).jpeg)
 
-# *4. Datos estadisticos y Historigrama*
+# *4. Datos estadisticos y Histograma*
    
 La explicacion de cada linea de codigo se encuentra en los comentarios de la parte del codigo
  ```python
@@ -97,7 +97,7 @@ Coeficiente de variación: -1.973583540200225
 * Desviación estándar: Es la raíz cuadrada de la varianza y nos dice cuánto varían los valores en promedio.
 * Coeficiente de Variación (CV): Mide la variabilidad relativa respecto a la media.
 
-## **Ya con todo esto , se crea una interfaz para el historigrama con las funciones de matplotlib similares al punto 3**
+## **Ya con todo esto , se crea una interfaz para el histograma con las funciones de matplotlib similares al punto 3**
 
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/155112a9-58bf-45c5-82b3-6cde9e2dfb59.jpg)
    
