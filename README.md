@@ -55,6 +55,8 @@ esto para evitar
    mp.legend()
    mp.grid()
    ```
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/c83aa23a-1271-442d-a241-1e4a1e78adaa.jpg)
+
 5. **
 
    
