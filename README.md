@@ -109,16 +109,13 @@ Coeficiente de variación: -1.973583540200225
 Este código toma los valores de la señal, los agrupa en 100 categorías y calcula cuántas veces aparece cada valor dentro de esos grupos. Luego, normaliza estos valores para obtener la probabilidad de ocurrencia de cada grupo y genera los límites de cada bin para graficar la función de probabilidad.
 
 
-**toma los valores de la señal y los organiza en 100 grupos para calcular la probabilidad de ocurrencia de cada valor. A continuación, explicamos cada línea del código.**
+**La siguiente parte del codigo toma los valores de la señal y los organiza en 100 grupos para calcular la probabilidad de ocurrencia de cada valor. A continuación, explicamos cada línea del código.**
 
-```python
-min_val = min(original_signal)  # Valor mínimo de la señal
-```
 
 **Se obtiene el valor mínimo de la señal, que será el límite inferior del rango en el que se agruparán los valores.**
 
 ```python
-max_val = max(original_signal)  # Encuentra el valor más grande en la señal
+min_val = min(original_signal)  # Encuentra el valor más pequeño en la señal
 ```
 
 **Se encuentra el valor máximo de la señal, que será el límite superior del rango.**
