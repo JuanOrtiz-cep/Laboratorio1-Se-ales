@@ -64,9 +64,33 @@ time_10s = np.arange(num_muestras_10s)/fs ##10 SEGUNDOS del muestreo de datos
    mp.legend()
    mp.grid()
    ```
-![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/c83aa23a-1271-442d-a241-1e4a1e78adaa.jpg)
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Se%C3%B1alFisiologica(original).jpeg)
 
-5. **
+4. **Datos estadisticos
+   
+La explicacion de cada linea de codigo se encuentra en los comentarios de la parte del codigo
+ ```python
+  n = len(original_signal)  # Cantidad de datos en la señal
+sum_signal = 0  # Inicializamos la suma en 0
+
+for x in original_signal:
+    sum_signal += x  # Sumamos cada valor de la señal
+
+mean_signal = sum_signal / n  # Calculamos la media (promedio)
+
+suma_cuadrados_diferencias = 0
+for x in original_signal:
+    suma_cuadrados_diferencias += (x - mean_signal) ** 2  # Calculamos la diferencia de cada valor con la media
+
+varianza = suma_cuadrados_diferencias / (n - 1)  # Calculamos la varianza
+std_signal = varianza ** 0.5  # La desviación estándar es la raíz cuadrada de la varianza
+cv_signal = std_signal / mean_signal  # El coeficiente de variación mide cuánta variabilidad hay respecto a la media
+
+Media: -0.22333603181589465
+Desviación estándar: 0.44077231632548347
+Coeficiente de variación: -1.973583540200225
+
+```
 
    
 
