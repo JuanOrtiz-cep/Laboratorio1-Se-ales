@@ -106,6 +106,9 @@ Coeficiente de variación: -1.973583540200225
 
 # *5. Funcion de probabilidad*
 
+Este código toma los valores de la señal, los agrupa en 100 categorías y calcula cuántas veces aparece cada valor dentro de esos grupos. Luego, normaliza estos valores para obtener la probabilidad de ocurrencia de cada grupo y genera los límites de cada bin para graficar la función de probabilidad.
+
+
 **toma los valores de la señal y los organiza en 100 grupos para calcular la probabilidad de ocurrencia de cada valor. A continuación, explicamos cada línea del código.**
 
 ```python
@@ -158,7 +161,7 @@ probabilidad = [count / len(original_signal) for count in counts]
 ```python
 bins = [min_val + i * bin_width for i in range(num_bins + 1)]  # Crea los límites de cada grupo
 ```
- 
+ ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Funcion%20probabilidad.jpg)
 
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
