@@ -53,7 +53,7 @@ time_10s = np.arange(num_muestras_10s)/fs ##10 SEGUNDOS del muestreo de datos
 ```
 
  
-# *3. Personalización del gráfico: Utiliza las funciones de matplotlib para personalizar el aspecto del gráfico (colores, etiquetas, límites, etc.).*
+# *3. Personalización del gráfico (matplotlib).*
    
    ```python
    
