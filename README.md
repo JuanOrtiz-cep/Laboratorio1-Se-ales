@@ -65,7 +65,10 @@ time_10s = np.arange(num_muestras_10s)/fs ##10 SEGUNDOS del muestreo de datos
    mp.legend()
    mp.grid()
    ```
+
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Se%C3%B1alFisiologica(original).jpeg)
+
+
 
 # *4. Datos estadisticos y Histograma*
    
