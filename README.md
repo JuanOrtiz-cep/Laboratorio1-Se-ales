@@ -39,12 +39,21 @@ import matplotlib.pyplot as mp
 2. **Usando la web physionet descarga un archivo de ECG:**
 
 Coloca el archivo .hea y .dat (por ejemplo, cu01.hea, cu01.dat) en la misma carpeta que el script de Python.
-esto para evitar 
+esto para que se lean correctamente los archivos:
 
+```python
+record = wfdb.rdrecord('cu01') #LECTURA DEL ARCHIVO ECG
 
-3. **Selección del canal:** Modifica el índice dentro de signal = record.p_signal[:,0] para seleccionar un canal diferente si el registro tiene múltiples canales.
+print("Información del registro")
+print(record.__dict__)
+signal = record.p_signal[:,0] #asumiendo que es un canal único ,seleccionar un canal diferente si el registro tiene múltiples canales
+fs = record.fs #frecuencia de muestreo
+num_muestras_10s = fs*10
+time_10s = np.arange(num_muestras_10s)/fs ##10 SEGUNDOS del muestreo de datos
+```
+
  
-4. **Personalización del gráfico:** Utiliza las funciones de matplotlib para personalizar el aspecto del gráfico (colores, etiquetas, límites, etc.).
+3. **Personalización del gráfico:** Utiliza las funciones de matplotlib para personalizar el aspecto del gráfico (colores, etiquetas, límites, etc.).
    ```python
    
    mp.figure(figsize=(12, 4))
