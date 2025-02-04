@@ -18,7 +18,7 @@ Este repositorio contiene un script de Python simple para cargar y visualizar se
   * `numpy`: Para realizar operaciones numéricas.
 
 ## PROCEDIMIENTO
-1. **Instalacion librerias**
+# *1. Instalacion librerias*
     
   ```bash
  pip install wfdb numpy matplotlib (abrir CMD para instalar esas librerias o directamente en la terminal )
@@ -36,7 +36,7 @@ import matplotlib.pyplot as mp
 * matplotlib: para la graficación
 * numpy: para los datos estadisticos
 
-2. **Usando la web physionet descarga un archivo de ECG:**
+# *2. Usando la web physionet descarga un archivo de ECG:*
 
 Coloca el archivo .hea y .dat (por ejemplo, cu01.hea, cu01.dat) en la misma carpeta que el script de Python.
 esto para que se lean correctamente los archivos:
@@ -53,7 +53,8 @@ time_10s = np.arange(num_muestras_10s)/fs ##10 SEGUNDOS del muestreo de datos
 ```
 
  
-3. **Personalización del gráfico:** Utiliza las funciones de matplotlib para personalizar el aspecto del gráfico (colores, etiquetas, límites, etc.).
+# *3. Personalización del gráfico: Utiliza las funciones de matplotlib para personalizar el aspecto del gráfico (colores, etiquetas, límites, etc.).*
+   
    ```python
    
    mp.figure(figsize=(12, 4))
@@ -66,7 +67,7 @@ time_10s = np.arange(num_muestras_10s)/fs ##10 SEGUNDOS del muestreo de datos
    ```
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Se%C3%B1alFisiologica(original).jpeg)
 
-4. **Datos estadisticos
+# *4. Datos estadisticos y Historigrama*
    
 La explicacion de cada linea de codigo se encuentra en los comentarios de la parte del codigo
  ```python
@@ -91,7 +92,14 @@ Desviación estándar: 0.44077231632548347
 Coeficiente de variación: -1.973583540200225
 
 ```
+* Media: El promedio de los valores en la señal.
+* Varianza: Nos dice qué tan dispersos están los datos respecto a la media.
+* Desviación estándar: Es la raíz cuadrada de la varianza y nos dice cuánto varían los valores en promedio.
+* Coeficiente de Variación (CV): Mide la variabilidad relativa respecto a la media.
 
+## **Ya con todo esto , se crea una interfaz para el historigrama con las funciones de matplotlib similares al punto 3**
+
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/155112a9-58bf-45c5-82b3-6cde9e2dfb59.jpg)
    
 
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
