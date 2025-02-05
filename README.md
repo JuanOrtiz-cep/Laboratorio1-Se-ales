@@ -184,6 +184,30 @@ gaussian_noise = np.random.normal(media, desviacion_estandar, longitud)
 ```
 
 
+*Suma de la señal original con el ruido*
+
+* Se suma el ruido gaussiano a la señal original.
+
+* Esto da como resultado una señal ruidosa, donde la forma original de la señal sigue presente, pero con pequeñas perturbaciones aleatorias debido al ruido.
+
+```python
+gaussian_signal= original_signal + gaussian_noise
+```
+
+*Visualización de la señal ruidosa usando matplot*
+
+```python
+mp.figure(figsize=(12,4))
+mp.plot(time_10s, gaussian_signal[:num_muestras_10s], label='señal ruido gaussiano')
+mp.grid()
+mp.title('señal ruido gaussiano (cu01)')
+mp.xlabel('Tiempo[s]')
+mp.ylabel('Amplitud[mV]')
+mp.show()
+```
+
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/RUIDO%20GAUS%201.jpg)
+
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, por favor, crea un issue o un pull request.
