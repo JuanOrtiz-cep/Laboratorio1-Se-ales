@@ -285,7 +285,112 @@ SNR Impulso 2: 4.922667631619061 dB
 
 ## **Analisis de los ruidos impulsos**
 El cambio en el SNR se debe a que la potencia del ruido es proporcional al cuadrado de la amplitud del impulso. Al aumentar la amplitud, la potencia del ruido aumenta más rápidamente, lo que disminuye el SNR (peor relación señal a ruido.).
+
+## **6.3 Ruidos de Artefacto**
+
+Este código simula el efecto de la interferencia de la red eléctrica en una señal fisiológica. En muchos dispositivos electrónicos y biomédicos, se observa un ruido de 60 Hz debido a la corriente alterna (CA).
+
+Aquí se presentan dos casos, con diferentes niveles de interferencia, y se calcula el SNR (Signal-to-Noise Ratio) para evaluar el impacto del ruido en la señal.
+
+
+ ## **Ruido Artefacto 1**
+
+**Generación del ruido**
+
+* Se define un ruido de 60 Hz, que representa la interferencia eléctrica.
   
+* La amplitud del ruido es de 0.1V, lo que significa que la interferencia es pequeña.
+
+```python
+# Frecuencia de la interferencia eléctrica (60 Hz)
+i_frequency = 60  
+
+# Amplitud del ruido artefacto
+i_amplitude = 0.1  
+
+# Generamos el ruido artefacto (una señal senoidal de 60 Hz)
+device_noise = i_amplitude * np.sin(2 * np.pi * i_frequency * np.arange(len(original_signal)) / fs)
+```
+
+
+  **Suma del Ruido a la señal original**
+  
+  * Se suma la interferencia a la señal original, simulando una señal real afectada por artefactos eléctricos.
+    
+  ```python
+  device_signal = original_signal + device_noise
+  ```
+  
+   **Visualización de la señal ruidosa con funciones de matplotlib**
+   
+  ```python
+  
+  mp.figure(figsize=(12,4))
+  mp.plot(time_10s, device_signal[:num_muestras_10s], label='Señal con ruido artefacto')
+  mp.grid()
+  mp.title('Señal con ruido artefacto (60 Hz, Amplitud 0.1V)')
+  mp.xlabel('Tiempo [s]')
+  mp.ylabel('Amplitud [mV]')
+  mp.show()
+  
+  ```
+  ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20artefacto%201.jpg)
+
+**Cálculo del SNR**
+
+* Se calcula la potencia de la señal y la potencia del ruido.
+* Como la amplitud del ruido es baja, el SNR debe ser alto, indicando que la señal es más fuerte que el ruido.
+
+```python
+cuadrado_osignal = np.mean(original_signal**2)  
+cuadrado_ruido_artefacto = np.mean(device_noise**2)  
+snr = 10 * np.log10(cuadrado_osignal / cuadrado_ruido_artefacto)
+print(f"SNR Artefacto 1: {snr} dB")
+
+SNR Artefacto 1: 16.88703282121869 dB
+```
+## **Ruido Artefacto 2**
+
+**Generación del ruido con mayor interferencia**
+
+* Ahora, la amplitud del ruido es 0.5V, 5 veces mayor que en el primer caso.
+  
+* La interferencia es mucho más fuerte y afectará significativamente la señal.
+
+```python
+
+# Aumentamos la amplitud de la interferencia a 0.5V
+i_amplitude = 0.5  
+
+# Generamos el nuevo ruido de 60 Hz con mayor amplitud
+device_noise = i_amplitude * np.sin(2 * np.pi * i_frequency * np.arange(len(original_signal)) / fs)
+```
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20artefacto%202.jpg)
+
+## **Cálculo del SNR con mayor interferencia**
+
+* Como la amplitud del ruido es mayor, el SNR será menor.
+
+* Esto significa que la señal está mucho más afectada y será difícil de analizar sin filtros adecuados.
+  
+```python
+cuadrado_osignal = np.mean(original_signal**2)  
+cuadrado_ruido_artefacto = np.mean(device_noise**2)  
+snr = 10 * np.log10(cuadrado_osignal / cuadrado_ruido_artefacto)
+print(f"SNR Artefacto 2: {snr} dB")
+
+SNR Artefacto 2 : 2.9076327344983124 dB
+```
+
+## **  Analisis de ruido artefacto**
+
+ **A mayor interferencia de 60 Hz, menor SNR.**
+
+   * Con 0.1V de interferencia, la señal sigue siendo clara.
+   * Con 0.5V de interferencia, la señal se distorsiona fuertemente.
+
+   
+
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, por favor, crea un issue o un pull request.
