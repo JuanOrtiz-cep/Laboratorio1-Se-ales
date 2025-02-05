@@ -1,5 +1,7 @@
 # Laboratorio 1 Señales
 
+# **NOTA:** El codigo se completo se encuentra en el lab1main.py
+
 # Visualizador de Señales Electrocardiográficas (ECG)
 
 Este repositorio contiene un script de Python simple para cargar y visualizar señales electrocardiográficas (ECG) a partir de archivos .hea y .dat de PhysioNet.
