@@ -187,8 +187,6 @@ gaussian_noise = np.random.normal(media, desviacion_estandar, longitud)
 
 *Suma de la señal original con el ruido*
 
-* Se suma el ruido gaussiano a la señal original.
-
 * Esto da como resultado una señal ruidosa, donde la forma original de la señal sigue presente, pero con pequeñas perturbaciones aleatorias debido al ruido.
 
 ```python
@@ -248,6 +246,43 @@ SNR Gauss 2: 7.8596475845341915 dB
 * **El ruido influye directamente en el SNR:** Al aumentar la desviación estándar del ruido (de 0.1 a 0.2), la potencia del ruido crece y el SNR disminuye, lo que hace que la señal sea menos distinguible.
 
 ## **6.2 Ruidos de Impulso**
+Se define un ruido impulso con:
+
+Número de impulsos = 100 → El ruido número de impulsos en la señal.
+
+Amplitud del impulso = 5 → La amplitud del ruido lo suficientemente grande para ser observada en la gráfica.
+
+Longitud = len(original_signal) → Se genera un ruido de la misma longitud que la señal original.
+
+## **Para el ruido impulso 1**
+
+```python
+num_impulses = 100  # Número de impulsos
+impulse_amplitude = 5  # Amplitud de los impulsos
+impulse_noise = np.zeros(len(original_signal))# se crea un arreglo de ceros del tamaño de la señal original
+impulse_positions = np.random.choice(len(original_signal), num_impulses, replace=False) #crea impulsos aleatorios
+impulse_noise[impulse_positions] = impulse_amplitude #asigna la amplitud a las posiciones aleatorias  dentro del arreglo impulse_noise
+
+impulse_signal = original_signal + impulse_noise
+
+SNR Impulso: 10.943267544898685 dB
+```
+
+** visualización de la señal con matplot**
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20impulso%201.jpg)
+
+## **Para el ruido impulso 2**
+En este caso lo unico que va cambiar es el valor de la amplitud del impulso
+```python
+num_impulses = 100  # Número de impulsos
+impulse_amplitude = 10  # Amplitud de los impulsos
+impulse_noise = np.zeros(len(original_signal))# se crea un arreglo de ceros del tamaño de la señal original
+
+SNR Impulso 2: 4.922667631619061 dB
+```
+** visualización de la señal con matplot**
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20impulso%202.jpg)
+El cambio en el SNR se debe a que la potencia del ruido es proporcional al cuadrado de la amplitud del impulso. Al aumentar la amplitud, la potencia del ruido aumenta más rápidamente, lo que disminuye el SNR (peor relación señal a ruido.).
   
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
