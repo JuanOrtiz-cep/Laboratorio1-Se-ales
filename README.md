@@ -17,6 +17,8 @@ Este repositorio contiene un script de Python simple para cargar y visualizar se
   * `matplotlib`: Para crear gráficos.
   * `numpy`: Para realizar operaciones numéricas.
 
+  * **Archivos physionet**
+
 ## PROCEDIMIENTO
 # *1. Instalacion librerias*
     
