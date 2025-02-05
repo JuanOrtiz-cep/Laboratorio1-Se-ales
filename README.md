@@ -175,7 +175,8 @@ Desviación estándar = 0.1 → La amplitud del ruido varía en un rango pequeñ
 Longitud = len(original_signal) → Se genera un ruido de la misma longitud que la señal original.
 
 np .random : genera una señal aleatoria con distribución normal, es decir, una secuencia de valores que siguen una campana de Gauss.
- 
+
+ ## *Para el ruido gaussiano 1*
 ```python
 media = 0      # Media de la distribución (el centro de la campana)
 desviacion_estandar = 0.1  # Desviación estándar (el ancho de la campana)
@@ -223,10 +224,30 @@ cuadrado_ruido_gausiano = np.mean(gaussian_noise**2)  # Potencia del ruido
 snr = 10 * np.log10(cuadrado_osignal / cuadrado_ruido_gausiano)
 print(f"SNR Gauss: {snr} dB")
 
-SNR Gauss: 13.885570548616592 dB
+SNR Gauss 1: 13.885570548616592 dB
 ```
-El SNR nos dice cuántas veces la señal es más fuerte que el ruido. Un SNR alto indica que la señal es clara y el ruido es bajo. Un SNR bajo indica que el ruido está afectando significativamente la señal.
+**El SNR nos dice cuántas veces la señal es más fuerte que el ruido. Un SNR alto indica que la señal es clara y el ruido es bajo. Un SNR bajo indica que el ruido está afectando significativamente la señal.**
 
+## **Para el ruido gaussiano 2**
+En este caso lo unico que va cambiar es el valor de la desviacion estandar manteniendo el mismo codigo y visualizacion 
+
+```python
+media = 0      # Media de la distribución (el centro de la campana)
+desviacion_estandar = 0.2  # Desviación estándar (el ancho de la campana)
+longitud = len(original_signal)  # Longitud del array de ruido
+gaussian_noise = np.random.normal(media, desviacion_estandar, longitud)
+
+SNR Gauss 2: 7.8596475845341915 dB
+```
+
+![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20Gaus%202.jpg)
+
+## ** Analisis de los ruidos gaussianos**
+* *A mayor SNR, mejor calidad de la señal:* Un SNR de 13.89 dB indica que la señal sigue siendo clara, mientras que 7.87 dB sugiere que el ruido es más fuerte y afecta más la señal.
+  
+* *El ruido influye directamente en el SNR:* Al aumentar la desviación estándar del ruido (de 0.1 a 0.2), la potencia del ruido crece y el SNR disminuye, lo que hace que la señal sea menos distinguible.
+
+  
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, por favor, crea un issue o un pull request.
