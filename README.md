@@ -282,6 +282,8 @@ SNR Impulso 2: 4.922667631619061 dB
 ```
 ** visualización de la señal con matplot**
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20impulso%202.jpg)
+
+## **Analisis de los ruidos impulsos**
 El cambio en el SNR se debe a que la potencia del ruido es proporcional al cuadrado de la amplitud del impulso. Al aumentar la amplitud, la potencia del ruido aumenta más rápidamente, lo que disminuye el SNR (peor relación señal a ruido.).
   
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
