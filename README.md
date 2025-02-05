@@ -1,6 +1,6 @@
 # Laboratorio 1 Señales
 
-# **NOTA:** El codigo se completo se encuentra en el lab1main.py
+## **NOTA:** El codigo se completo se encuentra en el lab1main.py
 
 # Visualizador de Señales Electrocardiográficas (ECG)
 
