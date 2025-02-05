@@ -165,7 +165,7 @@ bins = [min_val + i * bin_width for i in range(num_bins + 1)]  # Crea los límit
 
  # *6. Ruidos en las señales*
 
-## *Ruidos gausianos*
+## *6.1 Ruidos gausianos*
 Se define un ruido gaussiano con:
 
 Media = 0 → El ruido está centrado en cero.
@@ -247,6 +247,7 @@ SNR Gauss 2: 7.8596475845341915 dB
   
 * **El ruido influye directamente en el SNR:** Al aumentar la desviación estándar del ruido (de 0.1 a 0.2), la potencia del ruido crece y el SNR disminuye, lo que hace que la señal sea menos distinguible.
 
+## **6.2 Ruidos de Impulso**
   
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
