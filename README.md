@@ -382,7 +382,7 @@ print(f"SNR Artefacto 2: {snr} dB")
 SNR Artefacto 2 : 2.9076327344983124 dB
 ```
 
-## **  Analisis de ruido artefacto**
+## **Analisis de ruido artefacto**
 
  **A mayor interferencia de 60 Hz, menor SNR.**
 
