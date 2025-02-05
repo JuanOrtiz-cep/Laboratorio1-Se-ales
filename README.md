@@ -243,9 +243,9 @@ SNR Gauss 2: 7.8596475845341915 dB
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20Gaus%202.jpg)
 
 ## **Analisis de los ruidos gaussianos**
-* *A mayor SNR, mejor calidad de la señal:* Un SNR de 13.89 dB indica que la señal sigue siendo clara, mientras que 7.87 dB sugiere que el ruido es más fuerte y afecta más la señal.
+* **A mayor SNR, mejor calidad de la señal:** Un SNR de 13.89 dB indica que la señal sigue siendo clara, mientras que 7.87 dB sugiere que el ruido es más fuerte y afecta más la señal.
   
-* *El ruido influye directamente en el SNR:* Al aumentar la desviación estándar del ruido (de 0.1 a 0.2), la potencia del ruido crece y el SNR disminuye, lo que hace que la señal sea menos distinguible.
+* **El ruido influye directamente en el SNR:** Al aumentar la desviación estándar del ruido (de 0.1 a 0.2), la potencia del ruido crece y el SNR disminuye, lo que hace que la señal sea menos distinguible.
 
   
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
