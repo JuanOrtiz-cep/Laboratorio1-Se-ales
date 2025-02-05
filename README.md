@@ -163,6 +163,27 @@ bins = [min_val + i * bin_width for i in range(num_bins + 1)]  # Crea los límit
 ```
  ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Funcion%20probabilidad.jpg)
 
+ # *6. Ruidos en las señales*
+
+## *Ruidos gausianos*
+Se define un ruido gaussiano con:
+
+Media = 0 → El ruido está centrado en cero.
+
+Desviación estándar = 0.1 → La amplitud del ruido varía en un rango pequeño.
+
+Longitud = len(original_signal) → Se genera un ruido de la misma longitud que la señal original.
+
+np .random : genera una señal aleatoria con distribución normal, es decir, una secuencia de valores que siguen una campana de Gauss.
+ 
+```python
+media = 0      # Media de la distribución (el centro de la campana)
+desviacion_estandar = 0.1  # Desviación estándar (el ancho de la campana)
+longitud = len(original_signal)  # Longitud del array de ruido
+gaussian_noise = np.random.normal(media, desviacion_estandar, longitud)
+```
+
+
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, por favor, crea un issue o un pull request.
