@@ -208,6 +208,25 @@ mp.show()
 
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/RUIDO%20GAUS%201.jpg)
 
+## **Calculo del SNR**
+
+**¿Que es el  SNR?**
+
+El SNR (Signal-to-Noise Ratio) es una medida que compara la potencia de la señal con la potencia del ruido. Se expresa en decibeles (dB) y nos indica qué tan clara es la señal en presencia de ruido.
+
+En python la ecuacion del SNR:
+
+```python
+cuadrado_osignal = np.mean(original_signal**2)  # Potencia de la señal
+cuadrado_ruido_gausiano = np.mean(gaussian_noise**2)  # Potencia del ruido
+
+snr = 10 * np.log10(cuadrado_osignal / cuadrado_ruido_gausiano)
+print(f"SNR Gauss: {snr} dB")
+
+SNR Gauss: 13.885570548616592 dB
+```
+El SNR nos dice cuántas veces la señal es más fuerte que el ruido. Un SNR alto indica que la señal es clara y el ruido es bajo. Un SNR bajo indica que el ruido está afectando significativamente la señal.
+
 Análisis adicional: Puedes agregar código para calcular características de la señal como frecuencia cardíaca, variabilidad de la frecuencia cardíaca, etc.
 Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, por favor, crea un issue o un pull request.
