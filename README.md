@@ -268,7 +268,7 @@ impulse_signal = original_signal + impulse_noise
 SNR Impulso: 10.943267544898685 dB
 ```
 
-** visualización de la señal con matplot**
+**visualización de la señal con matplot**
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20impulso%201.jpg)
 
 ## **Para el ruido impulso 2**
@@ -280,7 +280,7 @@ impulse_noise = np.zeros(len(original_signal))# se crea un arreglo de ceros del 
 
 SNR Impulso 2: 4.922667631619061 dB
 ```
-** visualización de la señal con matplot**
+**visualización de la señal con matplot**
 ![](https://github.com/JuanOrtiz-cep/Laboratorio1-Se-ales/blob/main/Ruido%20impulso%202.jpg)
 
 ## **Analisis de los ruidos impulsos**
